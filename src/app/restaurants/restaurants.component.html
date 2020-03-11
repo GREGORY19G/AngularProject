@@ -1,5 +1,5 @@
 <h1 class="title">All restaurants than you imagine</h1>
-<div *ngFor="let item of restaurants">
+<div *ngFor="let item of restaurants; index as restaurantId">
 
   <mat-card class="card">
     <mat-card-header class="head">
@@ -23,7 +23,7 @@
         <mat-icon class="toleft">star</mat-icon>
         <div class="toleft iconAling">{{item.price}}</div>
       </div>      
-      <button mat-button class="torigth">Details</button>
+      <a class="torigth" [routerLink]="['/restaurants', restaurantId]">Details</a>
     </mat-card-actions>
   </mat-card>
 </div>

@@ -12,6 +12,7 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { FooterComponent } from './footer/footer.component';
 import { RestaurantsServiceService } from './restaurants-service.service';
 import { HttpClientModule} from '@angular/common/http';
+import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule} from '@angular/common/http';
     MenuComponent,
     HomeComponent,
     RestaurantsComponent,
-    FooterComponent
+    FooterComponent,
+    RestaurantDetailComponent
   ],
   imports: [
     BrowserModule,
