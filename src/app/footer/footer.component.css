@@ -140,6 +140,26 @@
 {
   background-color:#3b5998
 }
+.facebook{
+  background-image:url("https://img.icons8.com/nolan/128/facebook.png");
+  background-position: center;
+  background-size: 35px;
+}
+.instagram{
+  background-image:url("https://img.icons8.com/nolan/256/instagram-new.png");
+  background-position: center;
+  background-size: 35px;
+}
+.github{
+  background-image:url("https://img.icons8.com/nolan/64/github.png");
+  background-position: center;
+  background-size: 35px;
+}
+.mail{
+  background-image:url("https://img.icons8.com/nolan/128/gmail.png");
+  background-position: center;
+  background-size: 35px;
+}
 .social-icons a.twitter:hover
 {
   background-color:#00aced

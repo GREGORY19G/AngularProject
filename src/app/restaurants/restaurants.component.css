@@ -1,12 +1,27 @@
 .main-container{
-    float: inline-start;
+  text-align: center;
+    float: left;
     position: -webkit-sticky;
-    
+    align-items: center;
 }
 .card {
-    max-width: 250px;
-    margin: 20px;
+    max-width: 200px;
+    min-width: 200px;
+    margin: 10px;
     float: left;
+    text-align: center;
+  }
+  .head{
+    height: 100px;
+  }
+  .body{
+    height: 40px;
+  }
+  .foot{
+    height: 40px;
+  }
+  .image{
+    height: 180px;
   }
 
   .title {
@@ -14,11 +29,25 @@
       text-align: center;
       color: black;
   }
-  
-  .header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: initial;
+
+  .toleft{
+    float: left;
   }
-  .main-container{
-    padding: 20px;
-  }
+
+  .spacer{
+    width: fit-content;
+    height: fit-content;
+}
+
+.torigth{
+  float: right;
+}   
+
+.alingContent{
+  justify-content: center;
+  align-items: center;
+}
+
+.iconAling{
+  margin-top: 4px;
+}

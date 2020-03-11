@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+import { RestaurantsServiceService } from '../restaurants-service.service';
 
 @Component({
   selector: 'app-restaurants',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./restaurants.component.css']
 })
 export class RestaurantsComponent implements OnInit {
-
-  constructor() { }
+  restaurants : any[] = []; 
+  constructor(
+    protected restaurantService : RestaurantsServiceService
+  ) { }
 
   ngOnInit() {
+    this.restaurantService.getRestaurants()
+    .subscribe(
+      (data) => {
+        this.restaurants = data['restaurants'];
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
 
 }

@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { FooterComponent } from './footer/footer.component';
+import { RestaurantsServiceService } from './restaurants-service.service';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,10 @@ import { FooterComponent } from './footer/footer.component';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [RestaurantsServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
