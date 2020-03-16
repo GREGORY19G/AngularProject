@@ -1,8 +1,10 @@
 .main-container{
   text-align: center;
-    float: left;
-    position: -webkit-sticky;
-    align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+.card-container{
+  display: inline-block;
 }
 .card {
     max-width: 200px;

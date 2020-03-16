@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RestaurantsServiceService } from './restaurants-service.service';
 import { HttpClientModule} from '@angular/common/http';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,9 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
     FooterComponent,
     RestaurantDetailComponent
   ],
+  entryComponents:[
+    RestaurantDetailComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,7 +35,8 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [RestaurantsServiceService],
   bootstrap: [AppComponent]

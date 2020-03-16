@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
 import { RestaurantsServiceService } from '../restaurants-service.service';
+import { MatDialog } from '@angular/material';
+import { RestaurantDetailComponent } from '../restaurant-detail/restaurant-detail.component';
+
 
 @Component({
   selector: 'app-restaurants',
@@ -9,8 +11,9 @@ import { RestaurantsServiceService } from '../restaurants-service.service';
 })
 export class RestaurantsComponent implements OnInit {
   restaurants : any[] = []; 
-  constructor(
-    protected restaurantService : RestaurantsServiceService
+  constructor(    
+    protected restaurantService : RestaurantsServiceService,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit() {
@@ -24,5 +27,9 @@ export class RestaurantsComponent implements OnInit {
       }
     );
   }
-
+  openDetail(){
+    this.dialog.open(
+      RestaurantDetailComponent
+    );
+  }
 }

@@ -11,13 +11,10 @@ import { RestaurantsComponent } from '../restaurants/restaurants.component';
 export class RestaurantDetailComponent implements OnInit {
   restaurant;
   constructor(
-    private route: ActivatedRoute,
-    protected restaurants
   ) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.restaurant = RestaurantsComponent.restaurants[+params.get('id')];
+    
   }
 
 }
