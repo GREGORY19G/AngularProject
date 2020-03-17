@@ -1,0 +1,33 @@
+.mainContent{
+  width: auto;
+  padding: 1%;
+  padding-top: 0px;
+}
+.title{
+  text-align: start;
+}
+.alingContent{
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+  }
+  .image{
+    float: left;
+    margin: 0px;
+    width: 220px;
+    height: 220px;
+  }
+  .content1{
+    float: left;
+    margin: 1%;
+    width: 220px;
+  }
+  .content2{
+    float: left;
+    margin: 1%;
+    width: 220px;
+  }
+  .Bold{
+    font: bold;
+  }
+  

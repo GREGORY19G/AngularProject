@@ -1,1 +1,25 @@
-<p>restaurant-detail works!</p>
+<div class="mainContent">
+<h2 class="title">{{restaurant.name}}</h2>
+<img mat-card-image
+class="content1" 
+src="{{restaurant.image_url}}" 
+alt="Photo of a Shiba Inu">
+<div class="content2">
+    <p>Country: {{restaurant.country}}</p>
+    <p>State: {{restaurant.state}}</p>
+    <p>City: {{restaurant.city}}</p>
+    <p>Area: {{restaurant.area}}</p>
+    <p>Postal code: {{restaurant.postal_code}}</p>
+</div>
+<div class="content1">
+    <b><p>{{restaurant.area}}</p></b>
+    <p>Phone: {{restaurant.phone}}</p>          
+
+    <div class="alingContent">
+        <mat-icon style="float: left;">star</mat-icon>
+        <div style="float: right; margin-top: 4px;">{{restaurant.price}}</div>
+      </div>  
+</div>
+
+
+

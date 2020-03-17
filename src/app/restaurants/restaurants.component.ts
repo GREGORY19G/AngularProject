@@ -27,9 +27,10 @@ export class RestaurantsComponent implements OnInit {
       }
     );
   }
-  openDetail(){
+  openDetail(restaurant){
     this.dialog.open(
-      RestaurantDetailComponent
-    );
+      RestaurantDetailComponent,{ width:"780px", data: restaurant}
+    );    
+    console.log(restaurant);
   }
 }

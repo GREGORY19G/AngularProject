@@ -1,7 +1,7 @@
 <h1 class="title">All restaurants than you imagine</h1>
 <div class="main-container">
 <div class="card-container" *ngFor="let item of restaurants; index as restaurantId">
-<a (click)="openDetail()">
+<a (click)="openDetail(item)">
   <mat-card class="card">
     <mat-card-header class="head">
       <mat-card-title>{{item.name}}</mat-card-title>
