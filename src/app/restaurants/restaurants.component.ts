@@ -31,6 +31,5 @@ export class RestaurantsComponent implements OnInit {
     this.dialog.open(
       RestaurantDetailComponent,{ width:"780px", data: restaurant}
     );    
-    console.log(restaurant);
   }
 }

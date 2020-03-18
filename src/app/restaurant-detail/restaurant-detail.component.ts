@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Inject} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {ReservateComponent} from '../reservate/reservate.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-restaurant-detail',
@@ -9,11 +11,20 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 export class RestaurantDetailComponent implements OnInit {
   restaurant : any;
-  constructor( @Inject(MAT_DIALOG_DATA) private data: any ) { 
+  constructor( @Inject(MAT_DIALOG_DATA) private data: any ,
+  public dialog: MatDialog
+
+  ) { 
     this.restaurant= data;
   }
 
   ngOnInit() {
+    
+  }
+  Reserve() {
+      this.dialog.open(
+        ReservateComponent,{ width:"500px", data: this.restaurant}
+      );    
     
   }
 

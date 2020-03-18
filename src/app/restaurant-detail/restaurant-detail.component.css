@@ -2,9 +2,12 @@
   width: auto;
   padding: 1%;
   padding-top: 0px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .title{
-  text-align: start;
+  text-align: center;
 }
 .alingContent{
     justify-content: center;
@@ -12,20 +15,26 @@
     width: 40px;
   }
   .image{
-    float: left;
     margin: 0px;
     width: 220px;
     height: 220px;
+    display: inline-block;
+    
   }
   .content1{
-    float: left;
+    vertical-align: middle;
+    display: inline-block;
     margin: 1%;
     width: 220px;
+    height: 220px;
+    
   }
-  .content2{
-    float: left;
+  .content2{   
+    vertical-align: middle;
     margin: 1%;
     width: 220px;
+    height: 220px;
+    display: inline-block;
   }
   .Bold{
     font: bold;

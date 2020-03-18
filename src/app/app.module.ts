@@ -14,6 +14,12 @@ import { RestaurantsServiceService } from './restaurants-service.service';
 import { HttpClientModule} from '@angular/common/http';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ReservateComponent } from './reservate/reservate.component';
+import{AngularFireModule} from '@angular/fire'
+import{AngularFireDatabaseModule} from '@angular/fire/database'
+import { environment } from 'src/environments/environment';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     HomeComponent,
     RestaurantsComponent,
     FooterComponent,
-    RestaurantDetailComponent
+    RestaurantDetailComponent,
+    ReservateComponent
   ],
   entryComponents:[
     RestaurantDetailComponent
@@ -36,7 +43,12 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatIconModule,
     MatCardModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    MatFormFieldModule,
+    MatDatepickerModule
+
   ],
   providers: [RestaurantsServiceService],
   bootstrap: [AppComponent]
