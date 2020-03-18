@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './menu/menu.component';
-import {MatToolbarModule, MatButtonModule, MatIconModule} from '@angular/material';
+import {MatToolbarModule, MatButtonModule, MatIconModule, MatNativeDateModule} from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
@@ -47,10 +47,12 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule 
+    
 
   ],
-  providers: [RestaurantsServiceService],
+  providers: [RestaurantsServiceService, MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

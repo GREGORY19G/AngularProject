@@ -24,8 +24,6 @@ export class RestaurantDetailComponent implements OnInit {
   Reserve() {
       this.dialog.open(
         ReservateComponent,{ width:"500px", data: this.restaurant}
-      );    
-    
+      );       
   }
-
 }

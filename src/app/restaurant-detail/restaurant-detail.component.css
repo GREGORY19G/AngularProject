@@ -22,12 +22,16 @@
     
   }
   .content1{
+    text-align: start;
     vertical-align: middle;
     display: inline-block;
     margin: 1%;
     width: 220px;
     height: 220px;
-    
+    background-color: #673ab7;
+    color: white;
+    padding: 1%;
+    border-radius: 10px;
   }
   .content2{   
     vertical-align: middle;
