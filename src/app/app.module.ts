@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './menu/menu.component';
-import {MatToolbarModule, MatButtonModule, MatIconModule, MatNativeDateModule} from '@angular/material';
+import {MatToolbarModule, MatButtonModule, MatIconModule, MatNativeDateModule, MatInputModule, MatSnackBarModule} from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
@@ -20,6 +20,13 @@ import{AngularFireDatabaseModule} from '@angular/fire/database'
 import { environment } from 'src/environments/environment';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { LoginComponent } from './login/login.component';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import { RegisterComponent } from './register/register.component';
+import { YourReservationsComponent } from './your-reservations/your-reservations.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +36,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     RestaurantsComponent,
     FooterComponent,
     RestaurantDetailComponent,
-    ReservateComponent
+    ReservateComponent,
+    LoginComponent,
+    RegisterComponent,
+    YourReservationsComponent
   ],
   entryComponents:[
     RestaurantDetailComponent
@@ -43,14 +53,19 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatIconModule,
     MatCardModule,
     HttpClientModule,
+    FormsModule,
     MatDialogModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatNativeDateModule 
-    
-
+    MatNativeDateModule ,
+    MatSelectModule,
+    MatPaginatorModule,
+    ReactiveFormsModule,
+    AngularFireAuthModule,
+    MatInputModule, 
+    MatSnackBarModule
   ],
   providers: [RestaurantsServiceService, MatDatepickerModule],
   bootstrap: [AppComponent]

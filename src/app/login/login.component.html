@@ -1,0 +1,57 @@
+<div class="container-fluid text-center" style="margin: 50px;">
+<div class="row d-flex justify-content-center">
+    <div class="col-md-4 col-lg-4 col-sm-2 mt-3" style="z-index: 2;">
+        <div class="card">
+            <div class="card-header" color="primary"><h3 class=" text-white text-center ProductSans"><i class="fas fa-user"></i>
+                Login</h3></div>
+            <div class="card-body">
+                <form [formGroup]="fg">
+                   <mat-form-field style="width: 100%;"> 
+                        <mat-label><i class="fas fa-envelope-square"></i>
+                        Email</mat-label>
+                        <input matInput placeholder="xample@email.com" formControlName="Email">
+                   </mat-form-field><br>
+
+                    <div *ngIf="Email.invalid &&(Email.touched || Email.dirty)">
+                        <mat-error *ngIf="Email.errors.required">
+                            This field is required
+                        </mat-error>
+                    
+                        <mat-error *ngIf="(Email.dirty || Email.touched) && Email.invalid && Email.errors.pattern">
+                            Use a valid email
+                        </mat-error>
+
+                        <mat-error *ngIf="Email.errors.maxlength">
+                            Email max length is 50
+                        </mat-error>
+                    </div>
+
+
+                    <mat-form-field style="width: 100%;">
+                        <mat-label>
+                            <i class="fas fa-key"></i>
+                            Password</mat-label>
+                        <input matInput type="password" placeholder="Your Password" formControlName="Password">
+                    </mat-form-field><br>
+
+                    <div *ngIf="Password.invalid &&(Password.touched || Password.dirty)">
+                        <mat-error *ngIf="Password.errors.required">
+                            The password can't be null
+                        </mat-error>
+
+                        <mat-error *ngIf="Password.errors.maxlength">
+                            The password is too long
+                        </mat-error>
+                    </div>
+                    
+                </form>
+            <div style="align-items: center; text-align: center;">
+                <button mat-raised-button color="primary" style="width: 100%;" (click)="Login()">Login
+                </button>
+                <p class="ProductSans mt-3">Don't have acount?</p>
+                <a mat-button color="accent" class="ProductSans" (click)="Register()">Register</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

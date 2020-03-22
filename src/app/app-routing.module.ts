@@ -1,3 +1,6 @@
+import { YourReservationsComponent } from './your-reservations/your-reservations.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -6,11 +9,13 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
 
 
 const routes: Routes = [
-{path: '', component: HomeComponent },
+{path: '', component: RestaurantsComponent },
 {path: 'reservate', component: HomeComponent },
 {path: 'restaurants', component: RestaurantsComponent },
 {path: 'about', component: HomeComponent },
-{path: 'login', component: HomeComponent },
+{path: 'login', component: LoginComponent },
+{path: 'register', component: RegisterComponent },
+{path: 'yourreservations', component: YourReservationsComponent },
 {path: 'restaurants/:restaurantId', component: RestaurantDetailComponent },
 {path: '*', component: HomeComponent }
 

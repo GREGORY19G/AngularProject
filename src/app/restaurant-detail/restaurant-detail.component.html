@@ -18,20 +18,26 @@ alt="Photo of a Shiba Inu">
  <div class="content1">
   <b> <p>Reservate</p> </b>         
 
-    <input matInput [matDatepicker]="picker">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
+    <input required type="date" [(ngModel)]="Date">
     
     <div>
-    <input type="time" name="" id="">
+    <input required type="time" [(ngModel)]="Tyme" />
     <mat-icon style="vertical-align: middle; margin-left: 3px;">schedule</mat-icon>
     </div>   
-    <div style="margin-left: auto; margin-right: auto;" class="alingContent">
-        <mat-icon style="float: left;">star</mat-icon>
-        <div style="float: right; margin-top: 4px;">{{restaurant.price}}</div>
-      </div> 
-      <button  mat-raised-button (click)="Reserve()"  
-      style="margin-left: auto; margin-right: auto; margin: 10px;">Reservar</button><br/> 
+    
+      <div >
+        
+        <div style="align-items: flex-end;margin-top: 10px;" class="alingContent">
+          Quality
+          <mat-icon style="float: left;">star</mat-icon>
+          <div style="float: right; margin-top: 4px;">{{restaurant.price}}</div>
+        </div> 
+        <button mat-raised-button mat-dialog-close color="warn"   
+        style="margin-top: 10px; ">Close</button>
+        <button  mat-raised-button (click)="Reserve()"  
+        style="margin-top: 10px; margin: 4px;">Reserve</button><br/> 
+      </div>
+      
 </div>
 
 

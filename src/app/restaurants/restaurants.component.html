@@ -1,4 +1,13 @@
-<h1 class="title">All restaurants than you imagine</h1>
+<h1 class="title">All restaurants for you</h1>
+<mat-form-field style="margin: 10px; margin-left: 55px;">
+  <mat-label>Select a country</mat-label>
+  <mat-select (selectionChange)="selectedCountry()" [(value)]="country">
+    <mat-option ngSelec *ngFor="let country of countries" [value]="country">
+      {{country}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
 <div class="main-container">
 <div class="card-container" *ngFor="let item of restaurants; index as restaurantId">
 <a (click)="openDetail(item)">
@@ -30,4 +39,11 @@
 </a>
 </div>
 </div>
-<div style="clear:both;"></div>
+<div style="clear:both; height: 30px;"></div>
+
+<mat-paginator [length]="length"
+              [pageSize]="pageSize"
+              (page)="pageEvent = ChangePage($event)"
+              >
+</mat-paginator>
+
